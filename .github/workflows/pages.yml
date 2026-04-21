@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+  update-domain:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set CNAME
+        run: |
+          mkdir -p _site
+          echo "firstgridconsulting.online" > _site/CNAME
+          echo "firstgridconsulting.online" > CNAME
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
