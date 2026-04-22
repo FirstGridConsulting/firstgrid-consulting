@@ -19,9 +19,10 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
-          bundler-cache: true
-          cache-version: 0
+          ruby-version: '3.3'
+          bundler: 'latest'
+      - name: Install dependencies
+        run: bundle install
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
