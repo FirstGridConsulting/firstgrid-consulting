@@ -1,6 +1,6 @@
-source https://rubygems.org
+source "https://rubygems.org"
 
-gem "jekyll"
-gem "jekyll-feed"
-gem "jekyll-seo-tag"
+gem "jekyll", "~> 4.3"
+gem "jekyll-feed", "~> 0.17"
+gem "jekyll-seo-tag", "~> 2.8"
 gem "minima", "~> 2.5"
