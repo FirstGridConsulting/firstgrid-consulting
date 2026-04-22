@@ -1,0 +1,153 @@
+/* === About page overrides === */
+
+.page-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  padding: 140px 24px 80px;
+  text-align: center;
+}
+
+.page-hero-inner {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  color: var(--text-subtle);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* About content layout */
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-text h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.about-text p {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  margin-bottom: 18px;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* Avatar placeholder */
+.about-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.about-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.avatar-letter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.about-avatar-caption {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Approach grid */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.approach-card {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.approach-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+
+.approach-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.approach-card p {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 120px 20px 60px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .about-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}

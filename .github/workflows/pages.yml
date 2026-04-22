@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Jekyll to GitHub Pages
 on:
   push:
     branches: [main]
@@ -7,27 +7,39 @@ permissions:
   contents: read
   pages: write
   id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/upload-pages-artifact@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          path: .
+          ruby-version: '3.2'
+          bundler-cache: true
+          cache-version: 0
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-  update-domain:
-    needs: deploy
-    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Set CNAME
-        run: |
-          mkdir -p _site
-          echo "firstgridconsulting.online" > _site/CNAME
-          echo "firstgridconsulting.online" > CNAME
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

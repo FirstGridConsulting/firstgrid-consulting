@@ -1,0 +1,29 @@
+# Jekyll config for FirstGrid Consulting website
+title: FirstGrid Consulting
+description: Distribution system engineering for utilities and developers
+baseurl: ""
+url: "https://firstgridconsulting.online"
+
+# Build settings
+theme: minima
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+  parse_span_html: true
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

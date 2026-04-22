@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — FirstGrid Consulting</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/_pages/post.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="{{ site.baseurl }}/" class="nav-logo">FirstGrid <span>Consulting</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        <li><a href="{{ site.baseurl }}/services">Services</a></li>
+        <li><a href="{{ site.baseurl }}/why-firstgrid">Why FirstGrid</a></li>
+        <li><a href="{{ site.baseurl }}/about">About</a></li>
+        <li><a href="{{ site.baseurl }}/case-studies">Case Studies</a></li>
+        <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+        <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Post Header -->
+  <section class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% if page.tags %}
+        <span class="post-tags">
+          {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
+        </span>
+        {% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+      <a href="{{ site.baseurl }}/blog" class="back-link">← Back to Blog</a>
+    </div>
+  </section>
+
+  <!-- Post Content -->
+  <section class="section post-content">
+    <div class="post-body">{{ content }}</div>
+  </section>
+
+  <!-- CTA Strip -->
+  <section class="cta-strip">
+    <div class="cta-strip-inner">
+      <h2>Want to discuss this further?</h2>
+      <p>Get in touch and we'll share more insights relevant to your utility.</p>
+      <a href="{{ site.baseurl }}/contact" class="btn btn-white">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; {{ site.time | date: '%Y' }} FirstGrid Consulting. All rights reserved.</p>
+      <p><a href="{{ site.baseurl }}/contact">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+</body>
+</html>

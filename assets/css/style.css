@@ -1,0 +1,465 @@
+/* ===================== RESET & BASE ===================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #0f1628;
+  --navy-light: #1a2744;
+  --blue: #3b82f6;
+  --blue-hover: #2563eb;
+  --bg: #f8fafc;
+  --white: #ffffff;
+  --text: #1a1a2e;
+  --text-muted: #475569;
+  --text-subtle: #94a3b8;
+  --border: #e2e8f0;
+  --radius: 10px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===================== NAVIGATION ===================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(15, 22, 40, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-logo {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.nav-logo span {
+  font-weight: 400;
+  color: var(--text-subtle);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.nav-links a {
+  color: var(--text-subtle);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--white);
+  background: rgba(255,255,255,0.08);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ===================== HERO ===================== */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  padding: 160px 24px 100px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.accent-text {
+  color: var(--blue);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--text-subtle);
+  max-width: 580px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===================== BUTTONS ===================== */
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--blue-hover);
+}
+
+.btn-outline {
+  border-color: rgba(255,255,255,0.3);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.05);
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.btn-white:hover {
+  background: #f1f5f9;
+}
+
+/* ===================== SECTIONS ===================== */
+.section {
+  padding: 80px 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 48px;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 12px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* ===================== SERVICES GRID ===================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+
+.service-icon {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color 0.2s;
+}
+
+.card-link:hover {
+  color: var(--blue-hover);
+}
+
+/* ===================== WHY GRID ===================== */
+.section-alt {
+  background: var(--bg);
+  max-width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-alt > .section-header,
+.section-alt > .why-grid {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.why-card {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.why-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.why-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ===================== CTA STRIP ===================== */
+.cta-strip {
+  background: var(--blue);
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.cta-strip-inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.cta-strip h2 {
+  font-size: 1.6rem;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cta-strip p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.05rem;
+  margin-bottom: 28px;
+}
+
+/* ===================== CONTACT SECTION ===================== */
+.contact {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.contact .section-header h2 {
+  color: var(--white);
+}
+
+.contact .section-header p {
+  color: var(--text-subtle);
+}
+
+.contact-methods {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 40px;
+  background: var(--navy-light);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.06);
+  flex: 1;
+  min-width: 220px;
+  transition: border-color 0.2s;
+}
+
+.contact-card:hover {
+  border-color: var(--blue);
+}
+
+.contact-icon {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.contact-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--white);
+}
+
+.contact-card p {
+  font-size: 0.9rem;
+  color: var(--text-subtle);
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  background: #0a0f1e;
+  padding: 32px 24px;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer p {
+  color: var(--text-subtle);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.footer a {
+  color: var(--blue);
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: var(--blue-hover);
+}
+
+/* ===================== MOBILE RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transform: translateY(-110%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 130px 20px 70px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    padding: 56px 20px;
+  }
+
+  .cta-strip {
+    padding: 48px 20px;
+  }
+
+  .contact-methods {
+    flex-direction: column;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

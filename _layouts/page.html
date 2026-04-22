@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — FirstGrid Consulting</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  {% if page.extra_css %}<link rel="stylesheet" href="{{ site.baseurl }}/{{ page.extra_css }}">{% endif %}
+  {% if page.blog_css %}<link rel="stylesheet" href="{{ site.baseurl }}/_pages/blog-contact.css">{% endif %}
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="{{ site.baseurl }}/" class="nav-logo">FirstGrid <span>Consulting</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="{{ site.baseurl }}/" class="{% if page.url == '/' or page.url == '' %}active{% endif %}">Home</a></li>
+        <li><a href="{{ site.baseurl }}/services" class="{% if page.url contains '/services' %}active{% endif %}">Services</a></li>
+        <li><a href="{{ site.baseurl }}/why-firstgrid" class="{% if page.url contains '/why-firstgrid' %}active{% endif %}">Why FirstGrid</a></li>
+        <li><a href="{{ site.baseurl }}/about" class="{% if page.url contains '/about' %}active{% endif %}">About</a></li>
+        <li><a href="{{ site.baseurl }}/case-studies" class="{% if page.url contains '/case-studies' %}active{% endif %}">Case Studies</a></li>
+        <li><a href="{{ site.baseurl }}/blog" class="{% if page.url contains '/blog' %}active{% endif %}">Blog</a></li>
+        <li><a href="{{ site.baseurl }}/contact" class="{% if page.url contains '/contact' %}active{% endif %}">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {{ content }}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; {{ site.time | date: '%Y' }} FirstGrid Consulting. All rights reserved.</p>
+      <p><a href="{{ site.baseurl }}/contact">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+  {% if page.extra_js %}<script src="{{ site.baseurl }}/{{ page.extra_js }}"></script>{% endif %}
+</body>
+</html>

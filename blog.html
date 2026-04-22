@@ -1,0 +1,35 @@
+---
+layout: page
+title: Blog & Insights
+description: Thought leadership on DER integration, hosting capacity, grid resilience, and distribution engineering.
+blog_css: true
+---
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Blog & Insights</h1>
+    <p>Thought leadership on DER integration, hosting capacity, grid resilience, and distribution engineering.</p>
+  </div>
+</section>
+
+<!-- Blog Posts -->
+<section class="section">
+  <div class="blog-list">
+    {% for post in site.posts %}
+    <article class="blog-post">
+      <div class="blog-post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        {% if post.tags %}
+        <span class="blog-tags">
+          {% for tag in post.tags %}<span class="blog-tag">{{ tag }}</span>{% endfor %}
+        </span>
+        {% endif %}
+      </div>
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="card-link">Read more →</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
