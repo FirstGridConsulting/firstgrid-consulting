@@ -73,7 +73,6 @@
 
 .carousel-viewport {
   overflow: hidden;
-  border-radius: var(--radius);
 }
 
 .carousel-track {
@@ -81,7 +80,6 @@
   gap: var(--card-gap, 32px);
   transition: transform 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
   will-change: transform;
-  padding-bottom: 8px;
 }
 
 /* === Carousel Cards (tall vertical) === */
@@ -89,7 +87,7 @@
   flex: 0 0 calc(100% / 3);
   min-width: calc(100% / 3);
   background: var(--bg);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border-strong);
   border-radius: var(--radius);
   padding: 40px 36px 36px;
   position: relative;
@@ -98,29 +96,23 @@
   transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
 }
 
-/* Visible border — always-on subtle border with glow on hover */
-.carousel-card::before {
-  content: '';
+/* Top accent bar */
+.card-accent-bar {
   position: absolute;
-  inset: -1px;
-  border-radius: calc(var(--radius) + 1px);
-  padding: 1.5px;
-  background: linear-gradient(135deg, transparent 0%, transparent 50%, rgba(59,130,246,0.4) 100%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  pointer-events: none;
+  top: 0;
+  left: 36px;
+  right: 36px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue) 0%, var(--blue-light) 100%);
+  border-radius: 0 0 2px 2px;
+  opacity: 0.85;
 }
 
+/* Stronger visible border on hover */
 .carousel-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06), 0 0 0 1px rgba(59,130,246,0.12);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--blue);
   transform: translateY(-4px);
-}
-
-.carousel-card:hover::before {
-  opacity: 1;
 }
 
 /* Accent bar */
