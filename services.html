@@ -225,16 +225,10 @@ extra_css: "_pages/services.css"
   const nextBtn = document.querySelector('.carousel-next');
   const viewport = document.querySelector('.carousel-viewport');
 
-  const VISIBLE = 3;
+  const totalPages = cards.length;
   let currentIndex = 0;
-  let cardWidth = 0;
-  let gap = 32;
-  let totalPages = 0;
 
   function init() {
-    cardWidth = viewport.clientWidth / VISIBLE;
-    totalPages = Math.max(1, Math.ceil(cards.length / VISIBLE));
-    gap = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-gap')) || 32;
     buildDots();
     positionCards();
   }
@@ -244,14 +238,14 @@ extra_css: "_pages/services.css"
     for (let i = 0; i < totalPages; i++) {
       const dot = document.createElement('button');
       dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Go to page ' + (i + 1));
+      dot.setAttribute('aria-label', 'Go to service ' + (i + 1));
       dot.addEventListener('click', () => goTo(i));
       dotsContainer.appendChild(dot);
     }
   }
 
   function positionCards() {
-    const offset = -(currentIndex * cardWidth + currentIndex * gap);
+    const offset = -(currentIndex * 100 + currentIndex * 32);
     track.style.transform = 'translateX(' + offset + 'px)';
     updateDots();
     updateButtons();
@@ -288,11 +282,6 @@ extra_css: "_pages/services.css"
       diff > 0 ? goTo(currentIndex + 1) : goTo(currentIndex - 1);
     }
     moving = false;
-  });
-
-  window.addEventListener('resize', () => {
-    cardWidth = viewport.clientWidth / VISIBLE;
-    positionCards();
   });
 
   init();
