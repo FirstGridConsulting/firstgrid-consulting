@@ -3,151 +3,204 @@
 .page-hero {
   background: var(--navy);
   color: var(--white);
-  padding: 156px 32px 88px;
+  padding: 140px 32px 80px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 40% 30%, rgba(59,130,246,0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .page-hero-inner {
-  max-width: 660px;
+  max-width: 680px;
   margin: 0 auto;
+  position: relative;
 }
 
 .page-hero h1 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: -0.03em;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  color: var(--white);
 }
 
 .page-hero p {
   color: rgba(255,255,255,0.55);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
-/* About content layout */
+/* === About Content === */
 .about-content {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 56px;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
   align-items: start;
-  max-width: 960px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .about-text h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 16px;
   color: var(--text);
 }
 
 .about-text p {
+  font-size: 0.975rem;
   color: var(--text-muted);
-  font-size: 1rem;
-  margin-bottom: 18px;
   line-height: 1.7;
-  max-width: 600px;
+  margin-bottom: 14px;
 }
 
-/* Sidebar facts */
 .about-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  border: 1px solid var(--border);
+  gap: 16px;
+  background: var(--bg-subtle);
+  padding: 28px 24px;
   border-radius: var(--radius);
-  overflow: hidden;
+  border: 1px solid var(--border);
 }
 
 .about-fact {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 24px;
-  border-bottom: 1px solid var(--border);
+  flex-direction: column;
+  gap: 2px;
 }
 
-.about-fact:last-child {
-  border-bottom: none;
-}
-
-.fact-label {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-}
-
-.fact-value {
-  font-size: 0.9375rem;
+.about-fact .fact-label {
+  font-size: 0.75rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--text-secondary);
 }
 
-/* Approach grid */
-.approach-grid {
+.about-fact .fact-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* === Approach Section === */
+.section-alt {
+  background: var(--bg-subtle);
+  max-width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.section-alt > .section-header,
+.section-alt > .services-grid {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 56px;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* === Services Grid (reused for approach cards) === */
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
-  max-width: 1000px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
-.approach-card {
-  padding: 32px 24px;
+/* === Service Card (shared) === */
+.service-card {
   background: var(--bg);
+  padding: 36px 32px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  transition: box-shadow 0.25s, border-color 0.25s;
+  transition: box-shadow 0.25s, border-color 0.25s, transform 0.2s;
+  position: relative;
 }
 
-.approach-card:hover {
-  box-shadow: var(--shadow-card);
-  border-color: var(--border-strong);
-}
-
-.approach-card::before {
+.service-card::before {
   content: '';
-  display: block;
-  width: 32px;
+  position: absolute;
+  top: 0;
+  left: 32px;
+  right: 32px;
   height: 2px;
   background: var(--blue);
-  margin-bottom: 18px;
-  border-radius: 1px;
+  opacity: 0;
+  transition: opacity 0.25s;
+  border-radius: 0 0 2px 2px;
 }
 
-.approach-number {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--blue);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 10px;
+.service-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
 }
 
-.approach-card h3 {
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card h3 {
   font-size: 1.05rem;
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--text);
+  letter-spacing: -0.01em;
 }
 
-.approach-card p {
+.service-card .card-intro {
   font-size: 0.9375rem;
   color: var(--text-muted);
+  margin-bottom: 18px;
   line-height: 1.6;
 }
 
-/* Responsive */
+/* === Responsive === */
 @media (max-width: 768px) {
   .page-hero {
-    padding: 136px 20px 64px;
+    padding: 120px 20px 60px;
   }
 
   .page-hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 64px 20px;
   }
 
   .about-content {
@@ -155,13 +208,7 @@
     gap: 32px;
   }
 
-  .about-text p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .approach-grid {
+  .services-grid {
     grid-template-columns: 1fr;
-    max-width: 400px;
   }
 }
