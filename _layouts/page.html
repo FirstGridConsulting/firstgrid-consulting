@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} — FirstGrid Consulting</title>
+  {% seo %}
   <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-image.png">
+  <meta name="theme-color" content="#0b1120">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
   {% if page.extra_css %}<link rel="stylesheet" href="{{ site.baseurl }}/{{ page.extra_css }}">{% endif %}
   {% if page.blog_css %}<link rel="stylesheet" href="{{ site.baseurl }}/_pages/blog-contact.css">{% endif %}

@@ -2,11 +2,13 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
+  --white: #ffffff;
   --navy: #0b1120;
   --navy-light: #111827;
   --blue: #3b82f6;
   --blue-light: #60a5fa;
   --blue-dark: #2563eb;
+  --blue-hover: var(--blue-light);
   --bg: #ffffff;
   --bg-subtle: #f9fafb;
   --bg-ink: #f3f4f6;
