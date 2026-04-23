@@ -3,6 +3,7 @@ layout: page
 title: Contact
 description: Get in touch with FirstGrid Consulting.
 extra_css: "_pages/contact.css"
+blog_css: true
 ---
 
 <!-- Page Hero -->
@@ -15,88 +16,95 @@ extra_css: "_pages/contact.css"
 
 <!-- Contact Section -->
 <section class="section">
-  <div class="services-grid" style="max-width: 960px; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+  <div class="contact-content">
 
-    <!-- Card: form + contact info -->
-    <div class="service-card contact-form-card">
-      <div class="card-accent-bar"></div>
-      <h3>Get in Touch</h3>
-      <p class="card-intro">We respond within one business day. Tell us about your project and we'll recommend the right engagement approach.</p>
-
-      <div class="contact-info-list">
-        <div class="contact-info-item">
-          <div class="info-item-accent"></div>
-          <div>
-            <h4>Email</h4>
-            <a href="mailto:info@firstgridconsulting.online" class="info-link">info@firstgridconsulting.online</a>
+    <!-- Left: contact info -->
+    <div class="contact-info">
+      <div class="contact-info-card">
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="info-item-accent"></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:info@firstgridconsulting.online" class="info-link">info@firstgridconsulting.online</a>
+            </div>
           </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="info-item-accent"></div>
-          <div>
-            <h4>Schedule a Call</h4>
-            <span class="info-text">Book a 30-minute introductory call</span>
+          <div class="contact-info-item">
+            <div class="info-item-accent"></div>
+            <div>
+              <h4>Schedule a Call</h4>
+              <span class="info-text">Book a 30-minute introductory call</span>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <h3 style="margin-top: 28px;">Send a Message</h3>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <div class="form-row">
-          <div class="form-col form-label-col">
-            <label for="name">Name</label>
+    <!-- Right: contact form -->
+    <div class="contact-form">
+      <div class="contact-form-card">
+        <div class="card-accent-bar"></div>
+        <h3>Get in Touch</h3>
+        <p class="card-intro">We respond within one business day. Tell us about your project and we'll recommend the right engagement approach.</p>
+
+        <h3 style="margin-top: 18px;">Send a Message</h3>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-row">
+            <div class="form-col form-label-col">
+              <label for="name">Name</label>
+            </div>
+            <div class="form-col form-input-col">
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
           </div>
-          <div class="form-col form-input-col">
-            <input type="text" id="name" name="name" required placeholder="Your name">
+          <div class="form-row">
+            <div class="form-col form-label-col">
+              <label for="email">Email</label>
+            </div>
+            <div class="form-col form-input-col">
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-col form-label-col">
-            <label for="email">Email</label>
+          <div class="form-row">
+            <div class="form-col form-label-col">
+              <label for="organization">Organization</label>
+            </div>
+            <div class="form-col form-input-col">
+              <input type="text" id="organization" name="organization" placeholder="Utility or company name">
+            </div>
           </div>
-          <div class="form-col form-input-col">
-            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          <div class="form-row">
+            <div class="form-col form-label-col">
+              <label for="service">Service of Interest</label>
+            </div>
+            <div class="form-col form-input-col">
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option value="der">DER Integration & Hosting Capacity</option>
+                <option value="feasibility">Feasibility Studies</option>
+                <option value="capacity">Capacity Expansion Planning</option>
+                <option value="resilience">Resilience Assessment</option>
+                <option value="assets">Asset & Inventory Management</option>
+                <option value="other">Other / Not sure</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-col form-label-col">
-            <label for="organization">Organization</label>
+          <div class="form-row form-row-tall">
+            <div class="form-col form-label-col">
+              <label for="message">Message</label>
+            </div>
+            <div class="form-col form-input-col">
+              <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..."></textarea>
+            </div>
           </div>
-          <div class="form-col form-input-col">
-            <input type="text" id="organization" name="organization" placeholder="Utility or company name">
+          <div class="form-row">
+            <div class="form-col form-label-col"></div>
+            <div class="form-col form-input-col">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-col form-label-col">
-            <label for="service">Service of Interest</label>
-          </div>
-          <div class="form-col form-input-col">
-            <select id="service" name="service">
-              <option value="">Select a service...</option>
-              <option value="der">DER Integration & Hosting Capacity</option>
-              <option value="feasibility">Feasibility Studies</option>
-              <option value="capacity">Capacity Expansion Planning</option>
-              <option value="resilience">Resilience Assessment</option>
-              <option value="assets">Asset & Inventory Management</option>
-              <option value="other">Other / Not sure</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row form-row-tall">
-          <div class="form-col form-label-col">
-            <label for="message">Message</label>
-          </div>
-          <div class="form-col form-input-col">
-            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..."></textarea>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-col form-label-col"></div>
-          <div class="form-col form-input-col">
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
   </div>
@@ -110,3 +118,4 @@ extra_css: "_pages/contact.css"
     <a href="mailto:info@firstgridconsulting.online" class="btn btn-white">Email Us</a>
   </div>
 </section>
+
