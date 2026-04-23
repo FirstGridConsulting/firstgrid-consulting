@@ -173,23 +173,36 @@
   letter-spacing: -0.01em;
 }
 
-.contact-form-card .form-group {
-  margin-bottom: 18px;
+/* Two-column form rows */
+.form-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: center;
 }
 
-.contact-form-card .form-group label {
+.form-row-tall {
+  align-items: start;
+}
+
+.form-label-col {
+  padding-top: 11px;
+}
+
+.form-label-col label {
   display: block;
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-secondary);
-  margin-bottom: 6px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
-.contact-form-card .form-group input,
-.contact-form-card .form-group select,
-.contact-form-card .form-group textarea {
+.form-input-col input,
+.form-input-col select,
+.form-input-col textarea {
   width: 100%;
   padding: 11px 14px;
   border: 1px solid var(--border);
@@ -202,19 +215,19 @@
   outline: none;
 }
 
-.contact-form-card .form-group input::placeholder,
-.contact-form-card .form-group textarea::placeholder {
+.form-input-col input::placeholder,
+.form-input-col textarea::placeholder {
   color: var(--text-subtle);
 }
 
-.contact-form-card .form-group input:focus,
-.contact-form-card .form-group select:focus,
-.contact-form-card .form-group textarea:focus {
+.form-input-col input:focus,
+.form-input-col select:focus,
+.form-input-col textarea:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
 }
 
-.contact-form-card .form-group select {
+.form-input-col select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8.825L1.175 4 2.238 2.938 6 6.7 9.763 2.938 10.825 4z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -224,7 +237,7 @@
   cursor: pointer;
 }
 
-.contact-form-card .form-group textarea {
+.form-input-col textarea {
   resize: vertical;
   min-height: 120px;
 }
@@ -262,6 +275,19 @@
 
   .contact-form-card {
     padding: 28px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .form-label-col {
+    padding-top: 0;
+  }
+
+  .form-label-col label {
+    margin-bottom: 4px;
   }
 
   .card-accent-bar {
