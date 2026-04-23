@@ -105,6 +105,23 @@
   line-height: 1.6;
 }
 
+/* Deliverable list alignment and spacing */
+.service-card .deliver-list {
+  margin: 0 0 18px 0;
+  padding-left: 20px;
+  list-style-position: outside;
+}
+
+.service-card .deliver-list li {
+  margin-bottom: 8px;
+}
+
+/* small spacer element used before 'Ideal For' paragraphs */
+.service-card .spacer {
+  display: block;
+  height: 12px;
+}
+
 /* === Responsive === */
 @media (max-width: 768px) {
   .page-hero {
