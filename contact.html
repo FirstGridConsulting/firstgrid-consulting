@@ -2,6 +2,7 @@
 layout: page
 title: Contact
 description: Get in touch with FirstGrid Consulting.
+extra_css: "_pages/contact.css"
 ---
 
 <!-- Page Hero -->
@@ -14,31 +15,34 @@ description: Get in touch with FirstGrid Consulting.
 
 <!-- Contact Section -->
 <section class="section">
-  <div class="contact-content">
-    <div class="contact-info">
+  <div class="contact-page-layout">
+    
+    <!-- Left: info column -->
+    <div class="contact-info-col">
       <h2>Get in Touch</h2>
       <p>We typically respond within 24 hours. Tell us about your project and we'll recommend the right engagement approach.</p>
       
-      <div class="contact-details">
-        <div class="contact-detail">
-          <div class="contact-detail-icon">📧</div>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="info-item-accent"></div>
           <div>
             <h3>Email</h3>
-            <a href="mailto:info@firstgridconsulting.online">info@firstgridconsulting.online</a>
+            <a href="mailto:info@firstgridconsulting.online" class="info-link">info@firstgridconsulting.online</a>
           </div>
         </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">📅</div>
+        <div class="contact-info-item">
+          <div class="info-item-accent"></div>
           <div>
             <h3>Schedule a Call</h3>
-            <p>Book a 30-minute introductory call</p>
+            <span class="info-text">Book a 30-minute introductory call</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="contact-form">
-      <h2>Send a Message</h2>
+    <!-- Right: form card -->
+    <div class="contact-form-card">
+      <h3>Send a Message</h3>
       <form action="https://formspree.io/f/your-form-id" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
@@ -68,8 +72,9 @@ description: Get in touch with FirstGrid Consulting.
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
       </form>
     </div>
+
   </div>
 </section>

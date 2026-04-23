@@ -1,9 +1,9 @@
 /* === About page overrides === */
 
 .page-hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  background: var(--navy);
   color: var(--white);
-  padding: 140px 24px 80px;
+  padding: 156px 32px 88px;
   text-align: center;
 }
 
@@ -15,22 +15,22 @@
 .page-hero h1 {
   font-size: 2.4rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.03em;
   margin-bottom: 14px;
 }
 
 .page-hero p {
-  color: var(--text-subtle);
-  font-size: 1.1rem;
+  color: rgba(255,255,255,0.55);
+  font-size: 1.05rem;
   line-height: 1.7;
 }
 
 /* About content layout */
 .about-content {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
-  align-items: center;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 56px;
+  align-items: start;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -44,83 +44,98 @@
 
 .about-text p {
   color: var(--text-muted);
-  font-size: 1.02rem;
+  font-size: 1rem;
   margin-bottom: 18px;
   line-height: 1.7;
   max-width: 600px;
 }
 
-/* Avatar placeholder */
-.about-image-placeholder {
+/* Sidebar facts */
+.about-sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 48px;
-  background: var(--bg);
-  border-radius: var(--radius);
+  gap: 0;
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
-.about-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: var(--blue);
+.about-fact {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
 }
 
-.avatar-letter {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--white);
+.about-fact:last-child {
+  border-bottom: none;
 }
 
-.about-avatar-caption {
+.fact-label {
+  font-size: 0.8125rem;
   color: var(--text-muted);
-  font-size: 0.9rem;
-  font-style: italic;
-  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.fact-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-secondary);
 }
 
 /* Approach grid */
 .approach-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+  gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .approach-card {
-  text-align: center;
-  padding: 28px 20px;
+  padding: 32px 24px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+.approach-card:hover {
+  box-shadow: var(--shadow-card);
+  border-color: var(--border-strong);
+}
+
+.approach-card::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--blue);
+  margin-bottom: 18px;
+  border-radius: 1px;
 }
 
 .approach-number {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--blue);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 0 auto 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
 }
 
 .approach-card h3 {
   font-size: 1.05rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  color: var(--text);
 }
 
 .approach-card p {
-  font-size: 0.93rem;
+  font-size: 0.9375rem;
   color: var(--text-muted);
   line-height: 1.6;
 }
@@ -128,7 +143,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .page-hero {
-    padding: 120px 20px 60px;
+    padding: 136px 20px 64px;
   }
 
   .page-hero h1 {
@@ -138,7 +153,6 @@
   .about-content {
     grid-template-columns: 1fr;
     gap: 32px;
-    text-align: center;
   }
 
   .about-text p {

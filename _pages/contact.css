@@ -1,0 +1,205 @@
+/* === Contact page overrides === */
+
+.page-hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 156px 32px 88px;
+  text-align: center;
+}
+
+.page-hero-inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  color: rgba(255,255,255,0.55);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Two-column contact layout */
+.contact-page-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.contact-info-col h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.contact-info-col > p {
+  color: var(--text-muted);
+  font-size: 0.97rem;
+  line-height: 1.65;
+  margin-bottom: 32px;
+  max-width: 420px;
+}
+
+/* Info list items */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item-accent {
+  width: 3px;
+  height: 24px;
+  background: var(--blue);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.contact-info-item h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.info-link {
+  font-size: 0.9375rem;
+  color: var(--blue);
+  transition: color 0.2s;
+}
+
+.info-link:hover {
+  color: var(--blue-dark);
+}
+
+.info-text {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+/* Contact form card */
+.contact-form-card {
+  padding: 36px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-form-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.contact-form-card .form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form-card .form-group label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contact-form-card .form-group input,
+.contact-form-card .form-group select,
+.contact-form-card .form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.contact-form-card .form-group input::placeholder,
+.contact-form-card .form-group textarea::placeholder {
+  color: var(--text-subtle);
+}
+
+.contact-form-card .form-group input:focus,
+.contact-form-card .form-group select:focus,
+.contact-form-card .form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+
+.contact-form-card .form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8.825L1.175 4 2.238 2.938 6 6.7 9.763 2.938 10.825 4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.contact-form-card .form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 136px 20px 64px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section {
+    padding: 64px 20px;
+  }
+
+  .contact-page-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-form-card {
+    padding: 28px 24px;
+  }
+}

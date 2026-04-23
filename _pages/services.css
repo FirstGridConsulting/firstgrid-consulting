@@ -1,9 +1,9 @@
 /* === Services page overrides === */
 
 .page-hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  background: var(--navy);
   color: var(--white);
-  padding: 140px 24px 80px;
+  padding: 156px 32px 88px;
   text-align: center;
 }
 
@@ -15,13 +15,13 @@
 .page-hero h1 {
   font-size: 2.4rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.03em;
   margin-bottom: 14px;
 }
 
 .page-hero p {
-  color: var(--text-subtle);
-  font-size: 1.1rem;
+  color: rgba(255,255,255,0.55);
+  font-size: 1.05rem;
   line-height: 1.7;
 }
 
@@ -35,6 +35,8 @@
 
 .service-detail:last-of-type {
   border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .service-detail-header {
@@ -48,7 +50,7 @@
   font-size: 3rem;
   font-weight: 700;
   color: var(--blue);
-  opacity: 0.25;
+  opacity: 0.15;
   line-height: 1;
   flex-shrink: 0;
 }
@@ -56,7 +58,7 @@
 .service-detail-header h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.02em;
 }
 
 .service-desc {
@@ -64,6 +66,7 @@
   font-size: 1.05rem;
   max-width: 680px;
   margin-bottom: 32px;
+  line-height: 1.65;
 }
 
 .service-breakdown {
@@ -74,10 +77,12 @@
 }
 
 .breakdown-col h3 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 14px;
-  color: var(--text);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .check-list {
@@ -89,9 +94,9 @@
   position: relative;
   padding-left: 24px;
   margin-bottom: 10px;
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .check-list li::before {
@@ -110,11 +115,15 @@
 /* Responsive */
 @media (max-width: 768px) {
   .page-hero {
-    padding: 120px 20px 60px;
+    padding: 136px 20px 64px;
   }
 
   .page-hero h1 {
     font-size: 1.8rem;
+  }
+
+  .section {
+    padding: 64px 20px;
   }
 
   .service-detail {
