@@ -13,180 +13,196 @@ extra_css: "_pages/services.css"
   </div>
 </section>
 
-<!-- Services Grid -->
-<section class="section services-section">
+<!-- Services Carousel -->
+<section class="services-carousel-section">
   <div class="section-header">
     <h2>Everything You Need, Covered</h2>
     <p>Each service is designed to give you the technical depth and actionable insights that utility-grade projects demand.</p>
   </div>
-  <div class="services-grid-modern">
 
-    <!-- Card 01 -->
-    <div class="service-card-modern" id="der">
-      <div class="card-accent-bar"></div>
-      <div class="card-number">01</div>
-      <div class="card-icon">⚡</div>
-      <h3>DER Integration & Hosting Capacity Studies</h3>
-      <p class="card-intro">As distributed energy resources penetrate deeper into distribution networks, utilities need reliable, repeatable methods to evaluate their impact.</p>
-      <div class="card-columns">
-        <div class="card-col">
-          <h4>What We Deliver</h4>
-          <ul class="deliver-list">
-            <li>Hosting capacity assessments by feeder and circuit</li>
-            <li>Detailed interconnection study reports</li>
-            <li>Power flow and short-circuit analysis</li>
-            <li>Voltage regulation & protection coordination review</li>
-            <li>Recommended mitigation strategies</li>
-            <li>GridEdge-based analysis and custom tooling</li>
-          </ul>
+  <div class="carousel-wrapper">
+    <div class="carousel-viewport">
+      <div class="carousel-track" id="servicesCarousel">
+
+        <!-- Card 01 -->
+        <div class="carousel-card" id="der">
+          <div class="card-accent-bar"></div>
+          <div class="card-number">01</div>
+          <div class="card-icon">⚡</div>
+          <h3>DER Integration & Hosting Capacity Studies</h3>
+          <p class="card-intro">As distributed energy resources penetrate deeper into distribution networks, utilities need reliable, repeatable methods to evaluate their impact.</p>
+          <div class="card-columns">
+            <div class="card-col">
+              <h4>What We Deliver</h4>
+              <ul class="deliver-list">
+                <li>Hosting capacity assessments by feeder and circuit</li>
+                <li>Detailed interconnection study reports</li>
+                <li>Power flow and short-circuit analysis</li>
+                <li>Voltage regulation & protection coordination review</li>
+                <li>Recommended mitigation strategies</li>
+                <li>GridEdge-based analysis and custom tooling</li>
+              </ul>
+            </div>
+            <div class="card-col">
+              <h4>Ideal For</h4>
+              <ul class="deliver-list">
+                <li>Utilities evaluating DER interconnection queues</li>
+                <li>Developers planning solar or storage projects</li>
+                <li>Distributors needing rapid capacity screening</li>
+                <li>Regulatory filings requiring technical evidence</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
+          </div>
         </div>
-        <div class="card-col">
-          <h4>Ideal For</h4>
-          <ul class="deliver-list">
-            <li>Utilities evaluating DER interconnection queues</li>
-            <li>Developers planning solar or storage projects</li>
-            <li>Distributors needing rapid capacity screening</li>
-            <li>Regulatory filings requiring technical evidence</li>
-          </ul>
+
+        <!-- Card 02 -->
+        <div class="carousel-card" id="feasibility">
+          <div class="card-accent-bar"></div>
+          <div class="card-number">02</div>
+          <div class="card-icon">📊</div>
+          <h3>Distribution Feasibility Studies</h3>
+          <p class="card-intro">Before committing to infrastructure upgrades or new interconnections, you need to know what's possible — and what it'll cost.</p>
+          <div class="card-columns">
+            <div class="card-col">
+              <h4>What We Deliver</h4>
+              <ul class="deliver-list">
+                <li>Infrastructure capacity evaluation</li>
+                <li>Upgrade scope and cost estimates</li>
+                <li>Timeline and sequencing recommendations</li>
+                <li>Regulatory compliance review</li>
+                <li>Alternative pathway analysis</li>
+              </ul>
+            </div>
+            <div class="card-col">
+              <h4>Ideal For</h4>
+              <ul class="deliver-list">
+                <li>New commercial or industrial interconnections</li>
+                <li>Utility capital planning inputs</li>
+                <li>Development project feasibility screening</li>
+                <li>Rate case and regulatory filings</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
+          </div>
         </div>
-      </div>
-      <div class="card-cta">
-        <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
+
+        <!-- Card 03 -->
+        <div class="carousel-card" id="capacity">
+          <div class="card-accent-bar"></div>
+          <div class="card-number">03</div>
+          <div class="card-icon">🔋</div>
+          <h3>Distribution Capacity Expansion Planning</h3>
+          <p class="card-intro">Long-term grid capacity planning requires more than trend lines. We combine load forecasting, DER penetration scenarios, and asset condition data.</p>
+          <div class="card-columns">
+            <div class="card-col">
+              <h4>What We Deliver</h4>
+              <ul class="deliver-list">
+                <li>Load forecasting and scenario modeling</li>
+                <li>Grid capacity gap analysis</li>
+                <li>Multi-year expansion roadmap</li>
+                <li>DER impact integration into planning models</li>
+                <li>Priority investment sequencing</li>
+              </ul>
+            </div>
+            <div class="card-col">
+              <h4>Ideal For</h4>
+              <ul class="deliver-list">
+                <li>Utilities planning for 5–10 year horizons</li>
+                <li>Organizations managing rapid load growth</li>
+                <li>Long-range resource planning cycles</li>
+                <li>Regulatory compliance for capacity standards</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
+          </div>
+        </div>
+
+        <!-- Card 04 -->
+        <div class="carousel-card" id="resilience">
+          <div class="card-accent-bar"></div>
+          <div class="card-number">04</div>
+          <div class="card-icon">🛡️</div>
+          <h3>Distribution Resilience Assessment</h3>
+          <p class="card-intro">Extreme weather, aging infrastructure, and cyber threats — the risks to distribution systems are mounting.</p>
+          <div class="card-columns">
+            <div class="card-col">
+              <h4>What We Deliver</h4>
+              <ul class="deliver-list">
+                <li>Vulnerability assessment by geography and asset class</li>
+                <li>Outage scenario modeling (weather, cyber, N-1)</li>
+                <li>Hardening priority rankings</li>
+                <li>Microgrid and islanding feasibility</li>
+                <li>Resilience metric benchmarking</li>
+              </ul>
+            </div>
+            <div class="card-col">
+              <h4>Ideal For</h4>
+              <ul class="deliver-list">
+                <li>Utilities in high-risk weather zones</li>
+                <li>Post-event recovery planning</li>
+                <li>Resilience grant applications (e.g., FEMA BRIC, LIF)</li>
+                <li>Regulatory resilience reporting requirements</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
+          </div>
+        </div>
+
+        <!-- Card 05 -->
+        <div class="carousel-card" id="assets">
+          <div class="card-accent-bar"></div>
+          <div class="card-number">05</div>
+          <div class="card-icon">📋</div>
+          <h3>Asset & Inventory Management</h3>
+          <p class="card-intro">Many utilities struggle with incomplete or inaccurate asset data. We help organizations build reliable asset inventories and condition frameworks.</p>
+          <div class="card-columns">
+            <div class="card-col">
+              <h4>What We Deliver</h4>
+              <ul class="deliver-list">
+                <li>Asset inventory audit and gap analysis</li>
+                <li>Condition assessment methodologies</li>
+                <li>Remaining useful life modeling</li>
+                <li>Data quality improvement plans</li>
+                <li>Integration strategy for GIS/AM/FI systems</li>
+              </ul>
+            </div>
+            <div class="card-col">
+              <h4>Ideal For</h4>
+              <ul class="deliver-list">
+                <li>Utilities conducting asset management reviews</li>
+                <li>Organizations consolidating data from multiple sources</li>
+                <li>Regulatory compliance (e.g., CPUC, NYPA standards)</li>
+                <li>Post-merger asset integration</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-cta">
+            <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- Card 02 -->
-    <div class="service-card-modern" id="feasibility">
-      <div class="card-accent-bar"></div>
-      <div class="card-number">02</div>
-      <div class="card-icon">📊</div>
-      <h3>Distribution Feasibility Studies</h3>
-      <p class="card-intro">Before committing to infrastructure upgrades or new interconnections, you need to know what's possible — and what it'll cost.</p>
-      <div class="card-columns">
-        <div class="card-col">
-          <h4>What We Deliver</h4>
-          <ul class="deliver-list">
-            <li>Infrastructure capacity evaluation</li>
-            <li>Upgrade scope and cost estimates</li>
-            <li>Timeline and sequencing recommendations</li>
-            <li>Regulatory compliance review</li>
-            <li>Alternative pathway analysis</li>
-          </ul>
-        </div>
-        <div class="card-col">
-          <h4>Ideal For</h4>
-          <ul class="deliver-list">
-            <li>New commercial or industrial interconnections</li>
-            <li>Utility capital planning inputs</li>
-            <li>Development project feasibility screening</li>
-            <li>Rate case and regulatory filings</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card-cta">
-        <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
-      </div>
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-prev" aria-label="Previous services">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn carousel-next" aria-label="Next services">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
-
-    <!-- Card 03 -->
-    <div class="service-card-modern" id="capacity">
-      <div class="card-accent-bar"></div>
-      <div class="card-number">03</div>
-      <div class="card-icon">🔋</div>
-      <h3>Distribution Capacity Expansion Planning</h3>
-      <p class="card-intro">Long-term grid capacity planning requires more than trend lines. We combine load forecasting, DER penetration scenarios, and asset condition data.</p>
-      <div class="card-columns">
-        <div class="card-col">
-          <h4>What We Deliver</h4>
-          <ul class="deliver-list">
-            <li>Load forecasting and scenario modeling</li>
-            <li>Grid capacity gap analysis</li>
-            <li>Multi-year expansion roadmap</li>
-            <li>DER impact integration into planning models</li>
-            <li>Priority investment sequencing</li>
-          </ul>
-        </div>
-        <div class="card-col">
-          <h4>Ideal For</h4>
-          <ul class="deliver-list">
-            <li>Utilities planning for 5–10 year horizons</li>
-            <li>Organizations managing rapid load growth</li>
-            <li>Long-range resource planning cycles</li>
-            <li>Regulatory compliance for capacity standards</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card-cta">
-        <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
-      </div>
-    </div>
-
-    <!-- Card 04 -->
-    <div class="service-card-modern" id="resilience">
-      <div class="card-accent-bar"></div>
-      <div class="card-number">04</div>
-      <div class="card-icon">🛡️</div>
-      <h3>Distribution Resilience Assessment</h3>
-      <p class="card-intro">Extreme weather, aging infrastructure, and cyber threats — the risks to distribution systems are mounting.</p>
-      <div class="card-columns">
-        <div class="card-col">
-          <h4>What We Deliver</h4>
-          <ul class="deliver-list">
-            <li>Vulnerability assessment by geography and asset class</li>
-            <li>Outage scenario modeling (weather, cyber, N-1)</li>
-            <li>Hardening priority rankings</li>
-            <li>Microgrid and islanding feasibility</li>
-            <li>Resilience metric benchmarking</li>
-          </ul>
-        </div>
-        <div class="card-col">
-          <h4>Ideal For</h4>
-          <ul class="deliver-list">
-            <li>Utilities in high-risk weather zones</li>
-            <li>Post-event recovery planning</li>
-            <li>Resilience grant applications (e.g., FEMA BRIC, LIF)</li>
-            <li>Regulatory resilience reporting requirements</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card-cta">
-        <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
-      </div>
-    </div>
-
-    <!-- Card 05 -->
-    <div class="service-card-modern" id="assets">
-      <div class="card-accent-bar"></div>
-      <div class="card-number">05</div>
-      <div class="card-icon">📋</div>
-      <h3>Asset & Inventory Management</h3>
-      <p class="card-intro">Many utilities struggle with incomplete or inaccurate asset data. We help organizations build reliable asset inventories and condition frameworks.</p>
-      <div class="card-columns">
-        <div class="card-col">
-          <h4>What We Deliver</h4>
-          <ul class="deliver-list">
-            <li>Asset inventory audit and gap analysis</li>
-            <li>Condition assessment methodologies</li>
-            <li>Remaining useful life modeling</li>
-            <li>Data quality improvement plans</li>
-            <li>Integration strategy for GIS/AM/FI systems</li>
-          </ul>
-        </div>
-        <div class="card-col">
-          <h4>Ideal For</h4>
-          <ul class="deliver-list">
-            <li>Utilities conducting asset management reviews</li>
-            <li>Organizations consolidating data from multiple sources</li>
-            <li>Regulatory compliance (e.g., CPUC, NYPA standards)</li>
-            <li>Post-merger asset integration</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card-cta">
-        <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Request a Consultation</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -198,3 +214,87 @@ extra_css: "_pages/services.css"
     <a href="{{ site.baseurl }}/contact" class="btn btn-white">Get in Touch</a>
   </div>
 </section>
+
+<!-- Carousel JS -->
+<script>
+(function() {
+  const track = document.getElementById('servicesCarousel');
+  const dotsContainer = document.getElementById('carouselDots');
+  const cards = track.querySelectorAll('.carousel-card');
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+  const viewport = document.querySelector('.carousel-viewport');
+
+  const VISIBLE = 3;
+  let currentIndex = 0;
+  let cardWidth = 0;
+  let gap = 32;
+  let totalPages = 0;
+
+  function init() {
+    cardWidth = viewport.clientWidth / VISIBLE;
+    totalPages = Math.max(1, Math.ceil(cards.length / VISIBLE));
+    gap = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-gap')) || 32;
+    buildDots();
+    positionCards();
+  }
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to page ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function positionCards() {
+    const offset = -(currentIndex * cardWidth + currentIndex * gap);
+    track.style.transform = 'translateX(' + offset + 'px)';
+    updateDots();
+    updateButtons();
+  }
+
+  function updateDots() {
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  }
+
+  function updateButtons() {
+    prevBtn.style.opacity = currentIndex === 0 ? '0.35' : '1';
+    prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+    nextBtn.style.opacity = currentIndex >= totalPages - 1 ? '0.35' : '1';
+    nextBtn.style.pointerEvents = currentIndex >= totalPages - 1 ? 'none' : 'auto';
+  }
+
+  function goTo(index) {
+    currentIndex = Math.max(0, Math.min(index, totalPages - 1));
+    positionCards();
+  }
+
+  prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+  nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+  // Touch / swipe support
+  let startX = 0, moving = false;
+  viewport.addEventListener('touchstart', e => { startX = e.touches[0].clientX; moving = true; });
+  viewport.addEventListener('touchend', e => {
+    if (!moving) return;
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? goTo(currentIndex + 1) : goTo(currentIndex - 1);
+    }
+    moving = false;
+  });
+
+  window.addEventListener('resize', () => {
+    cardWidth = viewport.clientWidth / VISIBLE;
+    positionCards();
+  });
+
+  init();
+})();
+</script>
