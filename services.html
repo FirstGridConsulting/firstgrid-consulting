@@ -223,12 +223,15 @@ extra_css: "_pages/services.css"
   const cards = track.querySelectorAll('.carousel-card');
   const prevBtn = document.querySelector('.carousel-prev');
   const nextBtn = document.querySelector('.carousel-next');
-  const viewport = document.querySelector('.carousel-viewport');
+  const wrapper = document.querySelector('.carousel-wrapper');
 
-  const totalPages = cards.length;
   let currentIndex = 0;
+  let totalPages = cards.length;
+  let slideWidth = 0;
+  const GAP = 32;
 
   function init() {
+    slideWidth = wrapper.clientWidth;
     buildDots();
     positionCards();
   }
@@ -239,20 +242,20 @@ extra_css: "_pages/services.css"
       const dot = document.createElement('button');
       dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
       dot.setAttribute('aria-label', 'Go to service ' + (i + 1));
-      dot.addEventListener('click', () => goTo(i));
+      dot.addEventListener('click', function() { goTo(i); });
       dotsContainer.appendChild(dot);
     }
   }
 
   function positionCards() {
-    const offset = -(currentIndex * 100 + currentIndex * 32);
+    const offset = -1 * (currentIndex * (slideWidth + GAP));
     track.style.transform = 'translateX(' + offset + 'px)';
     updateDots();
     updateButtons();
   }
 
   function updateDots() {
-    dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+    dotsContainer.querySelectorAll('.carousel-dot').forEach(function(dot, i) {
       dot.classList.toggle('active', i === currentIndex);
     });
   }
@@ -269,19 +272,24 @@ extra_css: "_pages/services.css"
     positionCards();
   }
 
-  prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
-  nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+  prevBtn.addEventListener('click', function() { goTo(currentIndex - 1); });
+  nextBtn.addEventListener('click', function() { goTo(currentIndex + 1); });
 
   // Touch / swipe support
-  let startX = 0, moving = false;
-  viewport.addEventListener('touchstart', e => { startX = e.touches[0].clientX; moving = true; });
-  viewport.addEventListener('touchend', e => {
+  var startX = 0, moving = false;
+  track.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; moving = true; });
+  track.addEventListener('touchend', function(e) {
     if (!moving) return;
-    const diff = startX - e.changedTouches[0].clientX;
+    var diff = startX - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 50) {
       diff > 0 ? goTo(currentIndex + 1) : goTo(currentIndex - 1);
     }
     moving = false;
+  });
+
+  window.addEventListener('resize', function() {
+    slideWidth = wrapper.clientWidth;
+    positionCards();
   });
 
   init();
