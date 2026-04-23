@@ -81,14 +81,14 @@
   display: flex;
   transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   will-change: transform;
-  width: max-content;
+  width: 500%;
 }
 
 /* === Carousel Cards (one at a time) === */
 .carousel-card {
-  flex: 0 0 100%;
-  min-width: 100%;
-  max-width: 100%;
+  flex: 0 0 20%;
+  min-width: 20%;
+  max-width: 20%;
   background: var(--bg);
   border: 2px solid var(--border-strong);
   border-radius: var(--radius);
@@ -97,7 +97,6 @@
   overflow: visible;
   box-shadow: var(--shadow-card);
   transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
-  margin-right: 32px;
 }
 
 .carousel-card:hover {
@@ -292,10 +291,6 @@
 
   .carousel-card {
     padding: 32px 24px 32px;
-  }
-
-  .carousel-card:first-child {
-    margin-right: 0;
   }
 
   .card-columns {
