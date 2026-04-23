@@ -1,147 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FirstGrid Consulting — Distribution System Engineering</title>
-  <meta name="description" content="FirstGrid Consulting helps utilities and developers with DER integration, hosting capacity studies, distribution capacity expansion, resilience planning, and asset management.">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+---
+layout: page
+title: Home
+description: FirstGrid Consulting helps utilities and developers with DER integration, hosting capacity studies, distribution capacity expansion, resilience planning, and asset management.
+permalink: /
+---
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">FirstGrid <span>Consulting</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="why-firstgrid.html">Why FirstGrid</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Distribution system engineering for <span class="accent-text">utilities</span> and <span class="accent-text">developers</span></h1>
+    <p class="tagline">Expert guidance on DER integration, capacity studies, resilience planning, and grid infrastructure — grounded in 20+ years of hands-on experience.</p>
+    <div class="hero-cta">
+      <a href="{{ site.baseurl }}/contact" class="btn btn-primary">Get in Touch</a>
+      <a href="{{ site.baseurl }}/services" class="btn btn-outline">View Services</a>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Distribution system engineering for <span class="accent-text">utilities</span> and <span class="accent-text">developers</span></h1>
-      <p class="tagline">Expert guidance on DER integration, capacity studies, resilience planning, and grid infrastructure — grounded in 20+ years of hands-on experience.</p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-        <a href="services.html" class="btn btn-outline">View Services</a>
-      </div>
+<!-- Services Overview -->
+<section class="section">
+  <div class="section-header">
+    <h2>What We Do</h2>
+    <p>From feasibility studies to long-term capacity planning, we bring deep technical expertise to your most complex distribution challenges.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">⚡</div>
+      <h3>DER Integration & Hosting Capacity</h3>
+      <p>Detailed analysis of distributed energy resource impacts, hosting capacity assessments, and interconnection support for utilities and developers.</p>
+      <a href="{{ site.baseurl }}/services" class="card-link">Learn more →</a>
     </div>
-  </section>
+    <div class="service-card">
+      <div class="service-icon">📋</div>
+      <h3>Feasibility Studies</h3>
+      <p>Comprehensive feasibility assessments for grid upgrades, new interconnections, and critical infrastructure investments.</p>
+      <a href="{{ site.baseurl }}/services" class="card-link">Learn more →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📈</div>
+      <h3>Capacity Expansion Planning</h3>
+      <p>Strategic long-term planning for grid capacity growth, load forecasting, and infrastructure development aligned with your utility's goals.</p>
+      <a href="{{ site.baseurl }}/services" class="card-link">Learn more →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🛡️</div>
+      <h3>Resilience Assessment</h3>
+      <p>Evaluate and harden grid resilience against extreme weather events, cyber threats, and operational disruptions.</p>
+      <a href="{{ site.baseurl }}/services" class="card-link">Learn more →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Asset & Inventory Management</h3>
+      <p>Data-driven strategies for utility asset lifecycle management, condition assessment, and inventory optimization.</p>
+      <a href="{{ site.baseurl }}/services" class="card-link">Learn more →</a>
+    </div>
+  </div>
+</section>
 
-  <!-- Services Overview -->
-  <section class="section">
-    <div class="section-header">
-      <h2>What We Do</h2>
-      <p>From feasibility studies to long-term capacity planning, we bring deep technical expertise to your most complex distribution challenges.</p>
+<!-- Why FirstGrid -->
+<section class="section section-alt">
+  <div class="section-header">
+    <h2>Why FirstGrid Consulting</h2>
+    <p>Where deep domain expertise meets practical, code-first solutions.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🎯</div>
+      <h3>20+ Years of Field Expertise</h3>
+      <p>Two decades building tools and solving real distribution system challenges for utilities and developers across the country.</p>
     </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">⚡</div>
-        <h3>DER Integration & Hosting Capacity</h3>
-        <p>Detailed analysis of distributed energy resource impacts, hosting capacity assessments, and interconnection support for utilities and developers.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📋</div>
-        <h3>Feasibility Studies</h3>
-        <p>Comprehensive feasibility assessments for grid upgrades, new interconnections, and critical infrastructure investments.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📈</div>
-        <h3>Capacity Expansion Planning</h3>
-        <p>Strategic long-term planning for grid capacity growth, load forecasting, and infrastructure development aligned with your utility's goals.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🛡️</div>
-        <h3>Resilience Assessment</h3>
-        <p>Evaluate and harden grid resilience against extreme weather events, cyber threats, and operational disruptions.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🔧</div>
-        <h3>Asset & Inventory Management</h3>
-        <p>Data-driven strategies for utility asset lifecycle management, condition assessment, and inventory optimization.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
-      </div>
+    <div class="why-card">
+      <div class="why-icon">💻</div>
+      <h3>Open-Source Credibility</h3>
+      <p>Built and maintain open-source tools used by engineers worldwide. Our analysis is accurate, transparent, and reproducible — every time.</p>
     </div>
-  </section>
+    <div class="why-card">
+      <div class="why-icon">🤝</div>
+      <h3>Flexible Engagement</h3>
+      <p>Project-based consulting or ongoing retainer support. We adapt to your timeline, budget, and complexity — not the other way around.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Why FirstGrid -->
-  <section class="section section-alt">
-    <div class="section-header">
-      <h2>Why FirstGrid Consulting</h2>
-      <p>Where deep domain expertise meets practical, code-first solutions.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🎯</div>
-        <h3>20+ Years of Field Expertise</h3>
-        <p>Two decades building tools and solving real distribution system challenges for utilities and developers across the country.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">💻</div>
-        <h3>Open-Source Credibility</h3>
-        <p>Built and maintain open-source tools used by engineers worldwide. Our analysis is accurate, transparent, and reproducible — every time.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🤝</div>
-        <h3>Flexible Engagement</h3>
-        <p>Project-based consulting or ongoing retainer support. We adapt to your timeline, budget, and complexity — not the other way around.</p>
-      </div>
-    </div>
-  </section>
+<!-- CTA Strip -->
+<section class="cta-strip">
+  <div class="cta-strip-inner">
+    <h2>Ready to get started?</h2>
+    <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+    <a href="{{ site.baseurl }}/contact" class="btn btn-white">Contact Us</a>
+  </div>
+</section>
 
-  <!-- CTA Strip -->
-  <section class="cta-strip">
-    <div class="cta-strip-inner">
-      <h2>Ready to get started?</h2>
-      <p>Tell us about your project and we'll get back to you within 24 hours.</p>
-      <a href="contact.html" class="btn btn-white">Contact Us</a>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section contact" id="contact">
-    <div class="section-header">
-      <h2>Let's Talk</h2>
-      <p>Whether you need a one-time study or ongoing consulting support, we'd love to hear from you.</p>
-    </div>
-    <div class="contact-methods">
-      <a href="mailto:info@firstgridconsulting.online" class="contact-card">
-        <div class="contact-icon">📧</div>
-        <h3>Email</h3>
-        <p>info@firstgridconsulting.online</p>
-      </a>
-      <a href="contact.html" class="contact-card">
-        <div class="contact-icon">📅</div>
-        <h3>Schedule a Call</h3>
-        <p>Book a 30-minute introductory call</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>&copy; 2026 FirstGrid Consulting. All rights reserved.</p>
-      <p><a href="contact.html">Contact</a></p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!-- Contact Section -->
+<section class="section contact" id="contact">
+  <div class="section-header">
+    <h2>Let's Talk</h2>
+    <p>Whether you need a one-time study or ongoing consulting support, we'd love to hear from you.</p>
+  </div>
+  <div class="contact-methods">
+    <a href="mailto:info@firstgridconsulting.online" class="contact-card">
+      <div class="contact-icon">📧</div>
+      <h3>Email</h3>
+      <p>info@firstgridconsulting.online</p>
+    </a>
+    <a href="{{ site.baseurl }}/contact" class="contact-card">
+      <div class="contact-icon">📅</div>
+      <h3>Schedule a Call</h3>
+      <p>Book a 30-minute introductory call</p>
+    </a>
+  </div>
+</section>
