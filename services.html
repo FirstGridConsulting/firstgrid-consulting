@@ -227,11 +227,10 @@ extra_css: "_pages/services.css"
 
   let currentIndex = 0;
   let totalPages = cards.length;
-  let slideWidth = 0;
+
   const GAP = 32;
 
   function init() {
-    slideWidth = wrapper.clientWidth;
     buildDots();
     positionCards();
   }
@@ -248,8 +247,8 @@ extra_css: "_pages/services.css"
   }
 
   function positionCards() {
-    const offset = -1 * (currentIndex * (slideWidth + GAP));
-    track.style.transform = 'translateX(' + offset + 'px)';
+    const offset = -1 * (currentIndex * 100);
+    track.style.transform = 'translateX(' + offset + '%)';
     updateDots();
     updateButtons();
   }
@@ -288,7 +287,6 @@ extra_css: "_pages/services.css"
   });
 
   window.addEventListener('resize', function() {
-    slideWidth = wrapper.clientWidth;
     positionCards();
   });
 

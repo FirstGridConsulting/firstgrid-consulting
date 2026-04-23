@@ -69,19 +69,19 @@
   margin: 0 auto;
   padding: 0 32px;
   position: relative;
-  overflow: hidden;
 }
 
 .carousel-viewport {
   overflow: hidden;
+  width: 100%;
   position: relative;
-  max-width: 100%;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   will-change: transform;
+  width: max-content;
 }
 
 /* === Carousel Cards (one at a time) === */
