@@ -70,16 +70,39 @@ a { text-decoration: none; color: inherit; }
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--white);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: -0.2px;
   font-family: 'Inter', -apple-system, sans-serif;
 }
 
-.nav-logo span {
+.nav-logo-img {
+  width: 36px;
+  height: 36px;
+  display: block;
+  border-radius: 8px;
+}
+
+.nav-logo-text {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.nav-logo-text span {
   font-weight: 400;
   color: rgba(255,255,255,0.55);
+}
+
+/* hero logo (larger mark above headline) */
+.hero-logo {
+  width: 72px;
+  height: auto;
+  display: block;
+  margin: 0 auto 18px;
 }
 
 .nav-links {
